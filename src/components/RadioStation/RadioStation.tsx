@@ -1,12 +1,10 @@
 import { MINUS_ICON, PLUS_ICON, STATION_ICON } from '../../assets';
+import { Station } from '../../screens/RadioWidget/types';
 import { IconButton } from '../Buttons';
 import { StationName } from '../Typography';
 import styles from './RadioStation.module.css';
 
-type Props = {
-    id: number,    
-    frequency: string,
-    name: string,
+type Props = Station & {    
     activeStation: number | null | undefined
 }
 

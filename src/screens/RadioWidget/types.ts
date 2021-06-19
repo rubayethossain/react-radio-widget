@@ -1,5 +1,5 @@
 export type Station = {
-    id: number,
+    id: number | null,
     name: string,
     frequency: string
 }
