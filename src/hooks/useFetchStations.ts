@@ -39,7 +39,13 @@ const useFetchStations = (stationEndpoint: string | null | '') => {
                 const res = await req.json();
 
                 if(Array.isArray(res) && res.length){
-                    setStations(res);
+                    const stations = res.map((s) => ({
+                        id: s.id,
+                        name: s.name,
+                        frequency: s.frequency
+                    }))
+                    
+                    setStations(stations);
                 }
             } catch (error) { console.log({ error })}
         };
