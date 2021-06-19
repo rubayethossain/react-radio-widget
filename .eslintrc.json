@@ -8,7 +8,8 @@
         "google",
         "plugin:react/recommended",
         "plugin:react-hooks/recommended",
-        "prettier"
+        "prettier",
+        "plugin:css-modules/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -18,7 +19,8 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "css-modules"
     ],
     "rules": {
         "react/prop-types": 0,
