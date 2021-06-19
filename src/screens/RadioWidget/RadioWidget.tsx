@@ -8,7 +8,7 @@ const RadioWidget = () => {
         <div className={styles.wrapper}>
             <WidgetTopBar />
             <WidgetContent />
-            <WidgetFooter />
+            <WidgetFooter station="Dribble FM"/>
         </div>
     )
 }
