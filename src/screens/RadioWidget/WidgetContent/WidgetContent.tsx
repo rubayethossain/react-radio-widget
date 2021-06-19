@@ -1,18 +1,24 @@
-import RadioStation from '../../../components/RadioStation'
-import styles from './WidgetContent.module.css'
+import RadioStation from '../../../components/RadioStation';
+import { Station } from '../types';
+import styles from './WidgetContent.module.css';
 
-const STATION = {
-    id: 1,
-    frequency: '66,6',
-    name: 'Dribble FM'
-}
+type Props = {
+    stationsList: Station[];
+};
+const WidgetContent = (props: Props) => {
+    const { stationsList } = props;
 
-const WidgetContent = () => {
     return (
         <div className={styles.wrapper}>
-            <RadioStation {...STATION} activeStation={0} />
+            <ul className={styles.stationList}>
+                {stationsList.map((station, key) => (
+                    <li key={key} className={styles.station}>
+                        <RadioStation {...station} activeStation={0} />
+                    </li>
+                ))}
+            </ul>
         </div>
-    )
-}
+    );
+};
 
-export default WidgetContent
+export default WidgetContent;
