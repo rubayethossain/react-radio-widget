@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import styles from './IconButton.module.css';
 
 type Props = {
     icon: string,
@@ -18,7 +19,7 @@ const IconButton = (props: Props) => {
     }
 
     const buttonClass = useMemo(() => {
-        return className ? `${className}` : ``
+        return className ? `${styles.button} ${className}` : styles.button
     }, [className])
 
     return (
@@ -30,8 +31,8 @@ const IconButton = (props: Props) => {
 
 IconButton.defaultProps = {
     alt: "",
-    width: "30px",
-    height: "auto"
+    width: "auto",
+    height: "35px"
 }
 
 export default IconButton
