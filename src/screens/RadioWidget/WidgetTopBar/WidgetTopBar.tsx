@@ -1,6 +1,8 @@
+import styles from './WidgetTopBar.module.css';
+
 const WidgetTopBar = () => {
     return (
-        <div>
+        <div className={styles.wrapper}>
             
         </div>
     )

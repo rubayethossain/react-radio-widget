@@ -1,6 +1,8 @@
+import styles from './WidgetContent.module.css'
+
 const WidgetContent = () => {
     return (
-        <div>
+        <div className={styles.wrapper}>
             
         </div>
     )

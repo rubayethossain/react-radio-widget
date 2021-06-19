@@ -1,6 +1,8 @@
+import styles from './WidgetFooter.module.css';
+
 const WidgetFooter = () => {
     return (
-        <div>
+        <div className={styles.wrapper}>
             
         </div>
     )
