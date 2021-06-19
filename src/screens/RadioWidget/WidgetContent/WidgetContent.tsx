@@ -1,6 +1,7 @@
 import RadioStation from '../../../components/RadioStation';
 import { Station } from '../types';
 import styles from './WidgetContent.module.css';
+import { Scrollbar } from "react-scrollbars-custom";
 
 type Props = {
     stationsList: Station[];
@@ -29,9 +30,9 @@ const WidgetContent = (props: Props) => {
     ));
 
     return (
-        <div className={styles.wrapper}>
+        <Scrollbar className={styles.wrapper}>
             <ul className={styles.stationList}>{list}</ul>
-        </div>
+        </Scrollbar>
     );
 };
 
